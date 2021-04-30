@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1b1b1b"
+        tools:context=".view.fragment.FullScreenImageFragment">
+
+        <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+            android:id="@+id/img_view_full_screen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/frame_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_loading"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:alpha="0.8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageButton
+                android:id="@+id/img_view_delete"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_margin="32dp"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:src="@drawable/ic_delete"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/img_view_cancel"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_margin="32dp"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:src="@drawable/ic_close"
+                android:visibility="gone"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/img_view_edit"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_margin="32dp"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:src="@drawable/ic_edit"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/img_view_ok"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_margin="32dp"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:src="@drawable/ic_check"
+                android:visibility="gone"
+                app:tint="@color/white" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
